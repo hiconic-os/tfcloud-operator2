@@ -152,7 +152,7 @@ There are 2 ways of updating tfcloud-operator. 1st way, undeploy the operator, d
         ```sh
         OPERATOR_DOCKER_HOST="your.docker.host" \
         TRIBEFIRE_POSTGRESQL_CHECKER_IMAGE="your.docker.host/tribefire-cloud/postgres-checker:1.1" \
-        TRIBEFIRE_POSTGRESQL_IMAGE="bitnami/postgresql:17" \
+        TRIBEFIRE_POSTGRESQL_IMAGE="bitnamilegacy/postgresql:17-debian-12" \
         ETCD_OPERATOR_IMAGE="your.docker.host/tribefire-cloud/etcd-operator:20250312-3983c32" \
         OPERATOR_NAMESPACE="your-namespace" \
             make deploy
