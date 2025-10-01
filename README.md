@@ -127,7 +127,7 @@ OPERATOR_NAMESPACE=adx make deploy
     ```sh
     OPERATOR_DOCKER_HOST="your.docker.host" \
     TRIBEFIRE_POSTGRESQL_CHECKER_IMAGE="your.docker.host/tribefire-cloud/postgres-checker:1.1" \
-    TRIBEFIRE_POSTGRESQL_IMAGE="bitnami/postgresql:16" \
+    TRIBEFIRE_POSTGRESQL_IMAGE="bitnamilegacy/postgresql:16-debian-12" \
     ETCD_OPERATOR_IMAGE="your.docker.host/tribefire-cloud/etcd-operator:20250312-3983c32" \
     OPERATOR_NAMESPACE="your-namespace" \
         make deploy
@@ -249,13 +249,13 @@ tfcloud-adx-operator-config-map-ckt9b75md9   13     14m
     go vet ./...
     test -s /path/to/tribefire-cloud/bin/setup-envtest || GOBIN=/path/to/tribefire-cloud/bin go install sigs.k8s.io/controller-runtime/tools/setup-envtest@latest
     KUBEBUILDER_ASSETS="/path/to/tribefire-cloud/bin/k8s/1.25.0-darwin-arm64" go test ./... -coverprofile cover.out
-    ?   	tribefire-operator	[no test files]
-    ok  	tribefire-operator/api/v1	0.575s	coverage: 0.4% of statements
-    ?   	tribefire-operator/common	[no test files]
-    ok  	tribefire-operator/controllers	3.364s	coverage: 51.5% of statements
-    ?   	tribefire-operator/providers	[no test files]
-    ok  	tribefire-operator/tribefire	0.238s	coverage: 41.3% of statements
-    ?   	tribefire-operator/validation	[no test files]
+    ?    tribefire-operator [no test files]
+    ok   tribefire-operator/api/v1 0.575s coverage: 0.4% of statements
+    ?    tribefire-operator/common [no test files]
+    ok   tribefire-operator/controllers 3.364s coverage: 51.5% of statements
+    ?    tribefire-operator/providers [no test files]
+    ok   tribefire-operator/tribefire 0.238s coverage: 41.3% of statements
+    ?    tribefire-operator/validation [no test files]
     ```
 
 3. Build the operator binary
